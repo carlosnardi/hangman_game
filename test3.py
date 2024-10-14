@@ -7,7 +7,6 @@ for char in word:
   letters.append(char)
 
 num_letters = len(letters)
-print(num_letters) 
 print(letters)
 
 empty_word = []
@@ -18,16 +17,24 @@ print("".join(empty_word))
 
 def input_letter():
   letter_user = ""
-  word_result = ""
-  while letter_user != "exit":
+  num_tries = 6
+  while num_tries > 0:
+    answer = "wrong"
     letter_user = input("Type a letter: ")
     for i, item in enumerate(letters):
       if item == letter_user:
         empty_word[i] = letter_user
-    #for item in empty_word:
-      #word_result += item
-    #print(word_result)
-    print(empty_word)
-
+        answer = "right"        
+    if answer == "wrong":
+      num_tries -= 1
+    
+   # for item in range(num_letters):
+     # if em
+   
+    print(num_tries)
+    print("".join(empty_word))
+  if num_tries == 0:
+    print("Game Over")
+    
 input_letter()
 
