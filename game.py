@@ -9,7 +9,7 @@ for char in word:
 
 num_letters = len(letters)
 # while testing:
-print(letters)
+# print(letters)
 
 empty_word = []
 for item in range(num_letters):
@@ -37,13 +37,13 @@ def input_letter():
         word_completed = False
     if word_completed:
       print("".join(empty_word))
-      print("congratulations")
+      print("\n Congratulations!!!")
       break
    
-    print(num_tries)
+    # print(num_tries)
     print("".join(empty_word))
   if num_tries == 0:
-    print("Game Over")
+    print("\n Game Over")
     
 input_letter()
 
