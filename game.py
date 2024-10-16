@@ -1,4 +1,5 @@
 import random
+import draw
 
 list_words = ["apple","banana","kiwi","strawberry"]
 word = random.choice(list_words)
@@ -7,6 +8,7 @@ for char in word:
   letters.append(char)
 
 num_letters = len(letters)
+# while testing:
 print(letters)
 
 empty_word = []
@@ -27,9 +29,16 @@ def input_letter():
         answer = "right"        
     if answer == "wrong":
       num_tries -= 1
-    
-   # for item in range(num_letters):
-     # if em
+      draw.error_drawing(num_tries)
+  
+    word_completed = True
+    for item in empty_word:
+      if item == "_":
+        word_completed = False
+    if word_completed:
+      print("".join(empty_word))
+      print("congratulations")
+      break
    
     print(num_tries)
     print("".join(empty_word))
